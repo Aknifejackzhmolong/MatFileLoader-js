@@ -1,0 +1,30 @@
+{
+  "name": "mat-file-loader",
+  "version": "1.0.0",
+  "description": "A tool used to parse matlab .mat file",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aknifejackzhmolong/MatFileLoader-js.git"
+  },
+  "keywords": [
+    "matfile",
+    "mat",
+    "parser"
+  ],
+  "author": "Aknife",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aknifejackzhmolong/MatFileLoader-js/issues"
+  },
+  "homepage": "https://github.com/Aknifejackzhmolong/MatFileLoader-js#readme",
+  "dependencies": {
+    "pako": "^1.0.10"
+  }
+}

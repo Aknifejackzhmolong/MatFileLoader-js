@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>example page</title>
+    <script src="./lib/MatFileLoader.js"></script>
+</head>
+<body>
+<div><input id="file" type="file" accept=".mat"></div>
+<script type="text/javascript">
+    var input = document.getElementById('file');
+    input.onchange = function(ev) {
+        // let loader = new MatFileLoader(buffer);
+        const file = ev.target.files[0];
+        let reader = new FileReader();
+        reader.onload = function (e) {
+            let buffer = reader.result;
+            let mat = new MatFileLoader(buffer)
+            console.log(mat);
+            document.write(`<p>${mat.toJSON()}</p>`);
+        };
+        reader.readAsArrayBuffer(file);
+        return false;
+    };
+</script>
+</body>
+</html>
